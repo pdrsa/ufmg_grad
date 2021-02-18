@@ -7,11 +7,17 @@ Desenvolvidos por João Antonio Oliveira Pedrosa, no período de 2020-2023.
 
 # Matérias:
 
-Semestre 4:
+<details>
+  <summary> <b>4º Semestre</b> </summary>
+  <ul>
+    <li> Álgebra A </li>
+    <li>Algoritmos 1 </li>
+    <li> Fundamentos da Teoria da Computação </li>
+    <li> Introdução à Ciencia dos Dados </li>
+    <li> Introdução à Banco de Dados</li>
+    <li>Organização de Computadores 1</li>
+  </ul>
+</details>
 
-Álgebra A
-Algoritmos 1
-Fundamentos da Teoria da Computação
-Introdução à Ciencia dos Dados
-Introdução à Banco de Dados
-Organização de Computadores 1
+
+
