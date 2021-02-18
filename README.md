@@ -5,7 +5,7 @@ Todos os trabalhos foram publicados aqui após suas respectivas datas de entrega
 
 Desenvolvidos por João Antonio Oliveira Pedrosa, no período de 2020-2023 (Inclusive).
 
-#Matérias:
+# Matérias:
 
 Semestre 4:
 
