@@ -3,7 +3,7 @@
 Trabalhos feitos para o curso de graduação em Ciência da Computação na UFMG.
 Os trabalhos só são publicados aqui após suas respectivas datas de entrega.
 
-Desenvolvidos por João Antonio Oliveira Pedrosa, no período de 2020-2023.
+Desenvolvido por João Antonio Oliveira Pedrosa, no período de 2020-2023.
 
 # Matérias:
 
