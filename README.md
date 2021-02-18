@@ -1,7 +1,7 @@
 # Graduação em Ciência da Computação - UFMG
 
 Trabalhos feitos para o curso de graduação em Ciência da Computação na UFMG.
-Todos os trabalhos foram publicados aqui após suas respectivas datas de entrega (Trabalhos em progresso são ignorados no GitIgnore).
+Os trabalhos só são publicados aqui após suas respectivas datas de entrega.
 
 Desenvolvidos por João Antonio Oliveira Pedrosa, no período de 2020-2023.
 
