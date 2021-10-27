@@ -29,6 +29,14 @@ Desenvolvido por João Antonio Oliveira Pedrosa, no período de 2020-2023.
     <li> Programação Competitiva </li>
   </ul>
 </details>
-
-
+<details>
+  <summary> <b>6º Semestre</b> </summary>
+  <ul>
+    <li> Algoritmos Exponencias e Complexidade Parametrizada </li>
+    <li> Compiladores I </li>
+    <li> Engenharia de Software </li>
+    <li> Introdução à Física Estatística Computacional </li>
+    <li> Teste de Software </li>
+  </ul>
+</details>
 
