@@ -1,0 +1,7 @@
+let
+  function Fatorial(i:int):int =
+    if i=0 then 1 else i*Fatorial(i-1)
+in
+  Fatorial(4)
+end
+ 

@@ -1,0 +1,5 @@
+a) Diversas linhas sem comando.
+
+b) Tentativa de operação algébrica entre duas variáveis de diferentes tipos.
+
+c) O interpretador faz o casamento de padrões de acordo com a ordem que os padrões são declarados. Como fact(n) foi declarado antes de fact(0) e 0 se encaixa no padrão "n", a função nunca encontra o caso base.

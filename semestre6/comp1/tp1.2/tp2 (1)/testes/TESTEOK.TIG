@@ -1,0 +1,7 @@
+let 
+	var i : int := 0
+	var j : int := 5
+	var nome : string := "gustavo"
+in
+	i := i + j
+end

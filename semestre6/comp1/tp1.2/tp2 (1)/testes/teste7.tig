@@ -1,0 +1,6 @@
+let 
+	function soma(x1: int, x2: int) : int = x1 + x2
+	var resultado : int := 0
+in
+	resultado := soma(2, 5)
+end

@@ -1,0 +1,7 @@
+let 
+	function soma(x1: int, x2: int) : int = x1 + x2
+	var resultado : int := 0
+	var result_string : string := ""
+in
+	result_string := soma(2, "ufmg", 5)
+end

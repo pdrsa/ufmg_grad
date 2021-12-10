@@ -1,0 +1,18 @@
+yacc -d tiger.y -Wnone
+lex yylex.lex
+gcc -w lex.yy.c y.tab.c -o analyzer
+
+echo "Teste com sintaxe correta:"
+cat simple_tests/ok.tig
+echo ""
+echo ""
+echo "Output:"
+./analyzer < simple_tests/ok.tig
+echo ""
+
+echo "Teste com sintaxe incorreta:"
+cat simple_tests/nok.tig 
+echo ""
+echo ""
+echo "Output:"
+./analyzer < simple_tests/nok.tig

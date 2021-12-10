@@ -1,0 +1,11 @@
+let 
+	var result_string : string := ""	
+	function soma(x1: int, x2: int) : int = 
+		let var str1 : string := "a"
+		    var str2 : string := "b"
+		in
+		    str1 + str2
+		end	
+in
+	result_string := soma(2 , 5)
+end
