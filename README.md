@@ -37,6 +37,7 @@ Desenvolvido por João Antonio Oliveira Pedrosa, no período de 2020-2023.
     <li> Engenharia de Software </li>
     <li> Introdução à Física Estatística Computacional </li>
     <li> Teste de Software </li>
+    <li> Linguagens de Programação </li>
   </ul>
 </details>
 
