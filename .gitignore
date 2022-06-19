@@ -1,11 +1,13 @@
 # Permanently ignored (Has it's own repo)
 **/aulas
 **/provas
+**/livro
 semestre4/icd/projeto
 semestre4/ibd/tp2
 semestre5/alg2/tp1
 semestre6/engsoft/tp1
 semestre6/comp1/tp
+semestre6/lp
 semestre6/testsoft/TP1_Teste_de_Software
 semestre7/ri/tp1/corpus/
 
