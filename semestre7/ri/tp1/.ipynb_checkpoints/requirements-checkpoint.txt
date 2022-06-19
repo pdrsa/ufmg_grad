@@ -1,0 +1,13 @@
+beautifulsoup4==4.11.1
+cachetools==5.0.0
+certifi==2021.10.8
+charset-normalizer==2.0.12
+idna==3.3
+python-dateutil==2.8.2
+reppy==0.4.14
+requests==2.27.1
+six==1.16.0
+soupsieve==2.3.2.post1
+url-normalize==1.4.3
+urllib3==1.26.9
+warcio==1.7.4

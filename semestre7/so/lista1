@@ -1,0 +1,26 @@
+1
+
+A)
+
+B) Processos interativos. Como o Round-robin sempre está executando um pouco de cada processo, processos interativos são beneficiados por essa política pois dependem de rápidas execuções de pequenos processamentos, que é o que o Round-robin faz.
+
+C) Como na FIFO os processos que chegam primeiro são os primeiros a serem executados e todos os processos são executados até o final, aplicações como processos científicos são beneficiadas por essa política. Para ser mais específico, quando digo processos científicos me refiro genericamente a processos que são executados poucas vezes e que geralmente são mais longos e.g. o treinamento de uma rede neural.
+
+2
+
+A)
+A seção crítica é a área de escrita.
+Quando há o processo de leitura e escritura, as operações devem ser feitas em exclusão mútua, impedindo que um processo escreva enquanto o outro está lendo, para assim manter a consistência dos dados.
+
+B) Obter os garfos
+
+3
+
+4
+
+O wait executa duas instruções:
+Ler o valor que está na variável
+Modificar o valor da varíavel
+Se essa operação não for executada de forma atômica, uma inconsistência nos dados pode ocorrer, afinal, se dois processos estão tentando fazer operações no semáforo e a operação não é atômica, o processo A pode ler o semáforo e o processo B ler também, antes do processo A modificar o valor. Assim quando o valor for modificado, obteremos uma inconsistência nos dados e não poderemos garantir a exclusão mútua.
+
+
