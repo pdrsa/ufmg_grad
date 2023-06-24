@@ -1,0 +1,63 @@
+/* Arquivo de definição da interface entre cliente e servidor para o servidor de identidade
+ * Estamos usando a versão 3 de protocol buffers 
+ */
+syntax = "proto3";
+
+// Nome do pacote 
+package identity;
+
+// Definindo o serviço de identidade
+service Identity {
+  /* Definindo os métodos do serviço de identidade.
+     Os nomes, exatamente como definidos na especificação,
+     estão comentados em frente a cada método.
+   */
+  rpc auth (AuthRequest) returns (AuthReply) {} // Autenticação
+  rpc create_user (CreateUserRequest) returns (Integer) {} // Criação de usuários
+  rpc get_permission(Bytes) returns (String) {} // Verificação de acesso
+  rpc exit(Empty) returns (Integer) {} // Fim da execução
+}
+
+/* Para que tenhamos um código mais generálizavel, quando possível,
+   iremos definir mensagens menos ad-hoc. Isto é, quando uma requisição
+   ou uma resposta for composta de uma mensagem contendo apenas um parâmetro,
+   definiremos a mensagem como apenas o tipo do único parâmetro que ela contém
+   e a única variável dentro da mensagem será chamada de value.
+*/
+
+// Mensagem vazia
+message Empty {}
+
+// Mensagem simples composta apenas por uma string
+message String {
+  string value = 1;
+}
+// Mensagem simples composta apenas por um vetor de bytes
+message Bytes {
+  bytes value = 1;
+}
+
+// Mensagem simples composta apenas por um inteiro
+message Integer {
+  int32 value = 1;
+}
+
+// Requisição para a função de autenticação
+message AuthRequest {
+  string id = 1;      // Identificação do usuário
+  int32 password = 2; // Senha do usuário
+}
+
+// Resposta da função de autenticação
+message AuthReply {
+  int32 response = 1; // A resposta da requisição - 0 ou -1
+  bytes token = 2; // Vetor de bytes representando o token de autenticação
+}
+
+// Requisição para a função de criação de usuários
+message CreateUserRequest {
+  string id = 1; // Identificação do usuário
+  int32 password = 2; // Senha do usuário
+  string permission = 3; // Permissão do usuário
+  bytes token = 4; // Token de autenticação
+}

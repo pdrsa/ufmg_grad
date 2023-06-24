@@ -1,0 +1,51 @@
+/* Arquivo de definição da interface entre cliente e servidor para o servidor de identidade
+ * Estamos usando a versão 3 de protocol buffers 
+ */
+syntax = "proto3";
+
+// Nome do pacote 
+package pairs;
+
+// Definindo o serviço de pares
+service Pairs {
+  /* Definindo os métodos do serviço de pares.
+     Os nomes, exatamente como definidos na especificação,
+     estão comentados em frente a cada método.
+   */
+  rpc insert(InsertRequest) returns (Integer) {} // Autenticação
+  rpc query(QueryRequest) returns (String) {} // Criação de usuários
+  rpc exit(Empty) returns (Integer) {} // Fim da execução
+}
+
+/* Para que tenhamos um código mais generálizavel, quando possível,
+   iremos definir mensagens menos ad-hoc. Isto é, quando uma requisição
+   ou uma resposta for composta de uma mensagem contendo apenas um parâmetro,
+   definiremos a mensagem como apenas o tipo do único parâmetro que ela contém
+   e a única variável dentro da mensagem será chamada de value.
+*/
+
+// Mensagem vazia
+message Empty {}
+
+// Mensagem simples composta apenas por uma string
+message String {
+  string value = 1;
+}
+
+// Mensagem simples composta apenas por um inteiro
+message Integer {
+  int32 value = 1;
+}
+
+// Requisição para a função de inserção
+message InsertRequest {
+  int32 key = 1; // Chave
+  string value = 2; // Valor para a inserção
+  bytes token = 3; // Token de identificação
+}
+
+// Resposta da função de autenticação
+message QueryRequest {
+  int32 key = 1; // Chave para a consulta
+  bytes token = 3; // Token de identificação
+}

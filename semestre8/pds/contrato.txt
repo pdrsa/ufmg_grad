@@ -1,0 +1,118 @@
+------------------------------------  ROTAS  --------------------------------------------------------------------------
+
+Status Definitions: 200 = Okay, 400 = Bad Input, 404 = Route Not Found
+Addresses: localhost:8080/{route_name}
+
+Se for possível, definam esse endereço e essa porta como variáveis global ou algo assim pra evitar um Ctrl+H gigante depois.
+
+Usuarios ------------------------------------------------------------------------------------------------------
+
+Ler Usuário ------------ /getUser 
+
+Receives: 
+{"user_id": int}
+
+Returns:
+{"username": str,
+"interests": [str,str],
+"birthday": str,
+"fullname": str,
+"about": str}
+
+Criar Usuário ----------- /createUser
+
+Receives: 
+
+{"username": str,
+"password": str,
+"interests": [str,str],
+"birthday": str,
+"fullname": str,
+"about": str}
+
+Returns: Status
+
+
+Read Usuários Grupo ------------------- /getUserGroups
+
+Receives:
+{"group_id": int}
+
+Returns:
+[{"user_id": int, "username": str}, {"user_id": int, "username": str}, ...]
+
+
+Grupo ----------------------------------------------------------------------------------------------------------
+
+Read Grupo --------------------------- /getGroup
+
+Receives:
+{"group_id": int}
+
+Returns:
+{"group_name": str, "organizer_name": str, "organizer_contact": str, "interest": str, "about": str}
+
+
+Read Grupo Interest ----------------------- /getGroupInterest
+
+Receives: 
+{"interest": str}
+Returns: 
+[{"group_id": int, "group_name": str}, {"group_id": int, "group_name": str}, ...]
+
+
+Criar Grupo --------------------------
+
+Receives: 
+{"group_name": str, "organizer_id": int, "organizer_name": str, "organizer_contact": str, "interest": str, "about": str}
+
+Returns: Status
+
+
+Eventos --------------------------------------------------------------------------------------------------------
+
+Criar Evento ---------- /createEvent
+
+Receives: 
+{"group_id": int, "event_name": str, "date": str, "about": str}
+Returns: Status
+
+
+Read Eventos Grupo --------- /getEventGroup
+
+Receives:
+{"group_id": int}
+
+Returns:
+[{"event_name": str, "date": str, "about": str}, {"event_name": str, "date": str, "about": str}, ...]
+
+
+Posts ----------------------------------------------------------------------------------------------------------
+
+Criar Post ------------------------ /createPost
+Receives:
+{"user_id": int, "group_id": int, "content": str, "date": str}
+Returns: Status
+
+
+Read Posts Grupos ----------------- /getPosts
+
+Receives:
+{"group_id": int}
+
+Returns: 
+[{"username": str, "content": str, "date": str}] <- This will be ordered by most recent
+
+
+Outras ---------------------------------------------------------------------------------------------------------
+Login ---------  /login
+
+Receives: 
+{"username": str, "password": str}
+Returns: Status
+
+Add User Grupo ------------------ /addUserGroup
+Receives:
+{"user_id": int, "group_id": int}
+Return: Status
+

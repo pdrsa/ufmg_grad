@@ -2,6 +2,8 @@
 **/aulas
 **/provas
 **/livro
+**/data
+*.ipynb_checkpoints/
 semestre4/icd/projeto
 semestre4/ibd/tp2
 semestre5/alg2/tp1

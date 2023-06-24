@@ -1,0 +1,24 @@
+study-hall/package-lock.json
+study-hall/.DS_Store
+study-hall/node_modules
+study-hall//dist
+
+
+# local env files
+study-hall/.env.local
+study-hall/.env.*.local
+
+# Log files
+study-hall/npm-debug.log*
+study-hall/yarn-debug.log*
+study-hall/yarn-error.log*
+study-hall/pnpm-debug.log*
+
+# Editor directories and files
+study-hall/.idea
+study-hall/.vscode
+study-hall/*.suo
+study-hall/*.ntvs*
+study-hall/*.njsproj
+study-hall/*.sln
+study-hall/*.sw?
